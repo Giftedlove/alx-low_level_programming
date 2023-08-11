@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
-/* 0-positive_or_negative.c */
+/**
+ * main - prints out positive, negative or zero depending on the random value
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
