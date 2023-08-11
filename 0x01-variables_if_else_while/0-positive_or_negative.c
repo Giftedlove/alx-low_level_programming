@@ -3,7 +3,7 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/* 0-positive_or_negative.c */
 int main(void)
 {
 	int n;
