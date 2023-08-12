@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	int n;
-	char ch;
+	int n = '0';
+	char ch = 'a';
 
 	for (n = 48; n < 58; n++)
 	{
