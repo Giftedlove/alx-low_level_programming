@@ -14,7 +14,7 @@ int main(void)
 		{
 			if (m > n)
 			{
-				putchat(n);
+				putchar(n);
 				putchar(m);
 				if (n != 56 || m != 57)
 				{
