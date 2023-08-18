@@ -8,7 +8,7 @@
 
 void print_number(int number)
 {
-	int tempnumber;
+	unsigned int tempnumber;
 
 	tempnumber = number;
 	if (number < 0)
@@ -16,7 +16,7 @@ void print_number(int number)
 		_putchar('-');
 		tempnumber = -number;
 	}
-	if (number / 10)
+	if (tempnumber / 10)
 		print_number(tempnumber / 10);
 	_putchar(tempnumber % 10 + '0');
 
