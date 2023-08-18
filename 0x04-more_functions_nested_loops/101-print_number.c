@@ -2,41 +2,22 @@
 
 /**
  * print_number - prints an integer
- * @n: the number to be printed
+ * @number: the number to be printed
  * Return: Always 0
  */
 
-void print_number(int n)
+void print_number(int number)
 {
-	int t;
-	int v;
+	int tempnumber;
 
-	if (n < 0)
+	tempnumber = number;
+	if (number < 0)
 	{
-		n *= -1;
 		_putchar('-');
+		tempnumber = -number;
 	}
+	if (number / 10)
+		print_number(tempnumber / 10);
+	_putchar(tempnumber % 10 + '0');
 
-	t = 1;
-	v = 1;
-	while (v)
-	{
-		if (n / (t * 10) > 0)
-			t *= 10;
-		else
-		v = 0;
-	}
-	while (n >= 0)
-	{
-		if (t == 1)
-		{
-			_putchar((n % 10) + '0');
-			n = -1;
-		}
-		else
-		{
-			_putchar((n / t % 10) + '0');
-			t /= 10;
-		}
-	}
 }
