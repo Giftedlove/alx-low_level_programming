@@ -28,7 +28,8 @@ void check_elf(unsigned char *e_ident)
 
 	for (index = 0; index < 4; index++)
 	{
-		if (e_ident[index] != 127 && e_ident[index] != 'E' && e_ident[index] != 'L' && e_ident[index] != 'F')
+		if (e_ident[index] != 127 && e_ident[index] != 'E' && e_ident[index]
+				!= 'L' && e_ident[index] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -251,11 +252,13 @@ void close_elf(int elf)
 }
 
 /**
- * main - Displays the information contained in the ELF header at the start of an ELF file
+ * main - Displays the information contained in
+ * the ELF header at the start of an ELF file
  * @argc: The number of arguments supplied to the program
  * @argv: An array of pointers to the arguments
  * Return: 0 on success
- * Description: If the file is not an ELF File or the function fails - exit code 98
+ * Description: If the file is not an ELF File
+ * or the function fails - exit code 98
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
